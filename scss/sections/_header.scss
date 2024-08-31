@@ -15,6 +15,23 @@
     }
 }
 
+.header__logo {
+    width: 112px;
+    height: 112px;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    @include breakpoint(sm) {
+        width: 64px;
+        height: 64px;
+    }
+}
+
 .header__nav {
     display: flex;
     align-items: center;

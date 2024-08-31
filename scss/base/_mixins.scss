@@ -11,7 +11,11 @@
 // }
 
 @mixin breakpoint($point) {
-    @if $point==tab {
+    @if $point==base {
+        @media screen and (min-width: 1920px) {
+            @content;
+        }
+    } @else if $point==tab {
         @media screen and (max-width: 1400px) {
             @content;
         }
@@ -37,4 +41,117 @@
 @mixin no-tap-highlight {
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
+}
+
+@mixin responsive-font-size(
+    //  @include responsive-font-size(24, 50);
+    $min-size,
+    $max-size,
+    $min-width: 360,
+    $max-width: 1920
+) {
+    font-size: max(
+        #{$min-size}px,
+        min(
+            #{$max-size}px,
+            calc(
+                #{$min-size}px + (#{$max-size} - #{$min-size}) *
+                    (
+                        (100vw - #{$min-width}px) /
+                            (#{$max-width} - #{$min-width})
+                    )
+            )
+        )
+    );
+}
+//  -------
+@mixin font-size(
+    //  @include font-size(24, 50);
+    $min-size,
+    $max-size,
+    $min-width: 360,
+    $max-width: 1920
+) {
+    font-size: max(
+        #{$min-size}px,
+        min(
+            #{$max-size}px,
+            calc(
+                #{$min-size}px + (#{$max-size} - #{$min-size}) *
+                    (
+                        (100vw - #{$min-width}px) /
+                            (#{$max-width} - #{$min-width})
+                    )
+            )
+        )
+    );
+}
+
+//  -------
+@mixin gap(
+    //  @include gap(24, 50);
+    $min-size,
+    $max-size,
+    $min-width: 360,
+    $max-width: 1920
+) {
+    gap: max(
+        #{$min-size}px,
+        min(
+            #{$max-size}px,
+            calc(
+                #{$min-size}px + (#{$max-size} - #{$min-size}) *
+                    (
+                        (100vw - #{$min-width}px) /
+                            (#{$max-width} - #{$min-width})
+                    )
+            )
+        )
+    );
+}
+
+//  -------
+@mixin margin-bottom(
+    //  @include margin-bottom(24, 100);
+    $min-size,
+    $max-size,
+    $min-width: 360,
+    $max-width: 1920
+) {
+    margin-bottom: max(
+        #{$min-size}px,
+        min(
+            #{$max-size}px,
+            calc(
+                #{$min-size}px + (#{$max-size} - #{$min-size}) *
+                    (
+                        (100vw - #{$min-width}px) /
+                            (#{$max-width} - #{$min-width})
+                    )
+            )
+        )
+    );
+}
+
+@mixin resp(
+    //  @include resp(padding-top, 24, 100);
+    $property,
+    $min-size,
+    $max-size,
+    $min-width: 360,
+    $max-width: 1920
+) {
+    #{$property}: max(
+        #{$min-size}px,
+        min(
+            #{$max-size}px,
+            calc(
+                #{$min-size}px + (#{$max-size} - #{$min-size}) *
+                    (
+                        (100vw - #{$min-width}px) /
+                            (#{$max-width} - #{$min-width})
+                    )
+            )
+        )
+    );
 }

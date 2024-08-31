@@ -1,0 +1,23 @@
+:root {
+    --main-blue: #0297d4;
+    --dark: #131515;
+    --yellow: #ffcd00;
+
+    --font-family: "SF Pro Text", sans-serif;
+    --second-family: "SF Pro Rounded", sans-serif;
+}
+
+// Colors
+$accent: #d4c17f;
+$white: #fff;
+
+// $fz-11-20: calc(11px + (20 - 11) * ((100vw - 360px) / (1920 - 360)));
+$fz-14-20: calc(14px + (20 - 14) * ((100vw - 360px) / (1920 - 360)));
+$fz-16-20: calc(16px + (20 - 16) * ((100vw - 360px) / (1920 - 360)));
+$fz-18-26: calc(18px + (26 - 18) * ((100vw - 360px) / (1920 - 360)));
+$fz-24-50: calc(24px + (50 - 24) * ((100vw - 360px) / (1920 - 360)));
+
+$g-14-18: calc(14px + (18 - 14) * ((100vw - 360px) / (1920 - 360)));
+$g-24-78: calc(24px + (78 - 24) * ((100vw - 360px) / (1920 - 360)));
+$pt-24-94: calc(24px + (94 - 24) * ((100vw - 360px) / (1920 - 360)));
+$mr-24-135: calc(24px + (135 - 24) * ((100vw - 360px) / (1920 - 360)));

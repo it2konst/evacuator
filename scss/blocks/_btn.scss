@@ -7,7 +7,8 @@
 
     font-family: var(--font-family);
     font-weight: 600;
-    font-size: $fz-16-20;
+    @include responsive-font-size(16, 20);
+
     color: #fff;
 
     text-wrap: nowrap;
@@ -45,9 +46,4 @@
     border-radius: 50px;
     padding: 6px 36px 10px;
     max-width: 336px; // height: 69px;
-    // width: 100%;
-
-    // @include breakpoint(xsm) {
-    //     width: 236px;
-    // }
 }

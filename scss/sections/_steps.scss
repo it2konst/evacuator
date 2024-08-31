@@ -1,0 +1,46 @@
+.steps {
+    @include resp(padding-top, 24, 100);
+    @include resp(padding-bottom, 24, 100);
+    background-color: #fff5cc;
+}
+
+.steps__title {
+    font-weight: 700;
+    @include resp(font-size, 24, 40);
+    @include resp(margin-bottom, 24, 55);
+}
+
+.steps__list {
+    display: flex;
+    // align-items: center;
+    // justify-content: center;
+    @include resp(gap, 20, 40);
+
+    .steps__item {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .steps__icon1 {
+        display: block;
+        margin: 0 auto;
+        max-width: 347px;
+        width: 100%;
+    }
+
+    .steps__icon2 {
+        display: block;
+        margin: 0 auto;
+        max-width: 320px;
+        width: 100%;
+    }
+
+    .steps__text {
+        @include resp(font-size, 18, 26);
+    }
+
+    @include breakpoint(tab) {
+        flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,57 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-optical-sizing: auto;
+    color: var(--dark);
+
+    background-color: #f3f6f9;
+    padding-bottom: 600px;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1370px;
+    width: 100%;
+    padding: 0 15px;
+}
+
+a1 {
+    opacity: 0.9;
+    transition: opacity 0.2s ease-in-out, text-shadow 0.2s ease-in-out;
+
+    &:hover {
+        opacity: 1;
+        text-shadow: 0 0 4px #d795ff;
+    }
+}
+
+.visually-hidden {
+    /* Contain text within 1px box */
+    height: 1px;
+    overflow: hidden;
+    width: 1px;
+
+    /* Keep the layout */
+    position: absolute;
+
+    /* Remove any visible trace (e.g. background color) */
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%); /* browsers in the future */
+
+    /* Prevent the screen reader to skip spaces between words */
+    white-space: nowrap;
+}
+
+.none {
+    display: none !important;
+}
+
+.no-scroll {
+    // overflow-y: hidden;
+    overflow: hidden;
+}

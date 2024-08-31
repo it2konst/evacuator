@@ -1,0 +1,37 @@
+.hero__content {
+    max-width: 1920px;
+    height: 142px;
+    margin-left: auto;
+    margin-right: auto;
+    // position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+    background-image: url("./../images/header/Banner.webp");
+    // background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.hero__title {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: $fz-24-50;
+    color: #fff;
+
+    .hero__link {
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        color: #6ad3ff;
+    }
+
+    @include breakpoint(md) {
+        // word-break: normal;
+        hyphens: auto;
+
+        padding: 0px 15px;
+    }
+}

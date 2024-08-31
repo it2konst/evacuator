@@ -1,0 +1,53 @@
+.btn {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: $fz-16-20;
+    color: #fff;
+
+    text-wrap: nowrap;
+    // text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: middle;
+
+    border-radius: 50px;
+    padding: 16px 36px;
+    max-width: 335px;
+    width: 100%; // height: 56px;
+
+    background-color: var(--main-blue);
+
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &:active {
+        opacity: 1;
+        background: #077aa9;
+    }
+}
+
+.btn.btn--transparent {
+    background-color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+
+    border: 1px solid var(--main-blue);
+    border-radius: 50px;
+    padding: 6px 36px 10px;
+    max-width: 336px; // height: 69px;
+    // width: 100%;
+
+    // @include breakpoint(xsm) {
+    //     width: 236px;
+    // }
+}

@@ -1,0 +1,20 @@
+// Base
+@import "./base/reset";
+@import "./base/font";
+@import "./base/vars";
+@import "./base/mixins";
+@import "./base/base";
+
+// Sections
+@import "./sections/header";
+@import "./sections/hero";
+@import "./sections/services";
+// @import "./sections/advantages";
+// @import "./sections/business";
+// @import "./sections/footer";
+
+// Blocks
+@import "./blocks/btn";
+// @import "./blocks/sticky-btns";
+// @import "./blocks/button";
+// @import "./blocks/pagecrm";

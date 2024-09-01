@@ -1,0 +1,122 @@
+.what-inside {
+    @include resp(padding-top, 24, 100);
+    @include resp(padding-bottom, 24, 100);
+}
+
+.what-inside__title {
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 48px;
+}
+
+.what-inside__desc {
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.what-inside__text {
+    font-weight: 700;
+    font-size: 26px;
+}
+
+.what-inside__box {
+    margin-top: 100px;
+    // @include resp(margin-top, 24, 100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+
+    @include breakpoint(tab) {
+        flex-wrap: wrap;
+        row-gap: 92px;
+    }
+}
+
+.truck,
+.mileage,
+.repair,
+.difficulty {
+    position: relative;
+    width: 332px;
+    height: 271px;
+    background-color: #0297d4;
+    border-radius: 20px;
+
+    padding: 34px 32px 0px 32px;
+    line-height: 1.2;
+
+    .truck__title,
+    .mileage__title,
+    .repair__title,
+    .difficulty__title {
+        font-weight: 700;
+        font-size: 20px;
+        text-align: center;
+        color: #fff;
+        margin-bottom: 17px;
+    }
+
+    .truck__text,
+    .mileage__text,
+    .repair__text,
+    .difficulty__text {
+        font-weight: 400;
+        font-size: 18px;
+        text-align: center;
+        color: #fff;
+        word-wrap: break-word;
+    }
+}
+
+.truck::before,
+.mileage::before,
+.repair::before,
+.difficulty::before {
+    content: "";
+    position: absolute;
+    top: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140px;
+    height: 72px;
+    background-color: #0297d4;
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
+}
+
+.truck::after {
+    content: url("./../images/what-inside/truck.webp");
+    display: block;
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+}
+
+.mileage::after {
+    content: url("./../images/what-inside/mileage.webp");
+    display: block;
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+}
+
+.repair::after {
+    content: url("./../images/what-inside/repair.webp");
+    display: block;
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+}
+
+.difficulty::after {
+    content: url("./../images/what-inside/difficulty.webp");
+    display: block;
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+}

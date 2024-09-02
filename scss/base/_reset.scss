@@ -1,25 +1,37 @@
-html {
-    box-sizing: border-box;
+/* Reset and base styles  */
+* {
+    padding: 0px;
+    margin: 0px;
+    border: none;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 
-body {
-    margin: 0;
-    padding-bottom: 400px;
-    background-color: #ccc;
+/* Links */
+
+a,
+a:link,
+a:visited {
+    text-decoration: none;
 }
 
-p {
-    margin: 0;
+a:hover {
+    text-decoration: none;
 }
 
-figure {
-    margin: 0;
+/* Common */
+
+aside,
+nav,
+footer,
+header,
+section,
+main {
+    display: block;
 }
 
 h1,
@@ -27,47 +39,72 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-    margin: 0;
+h6,
+p {
     font-size: inherit;
     font-weight: inherit;
 }
 
 ul,
-ol,
-dd {
-    margin: 0;
-    padding: 0;
+ul li {
     list-style: none;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
+img {
+    vertical-align: top;
 }
 
-button {
-    background-color: transparent;
-    color: inherit;
-    border-width: 0;
-    border: 0;
-    padding: 0;
-    cursor: pointer;
+img,
+svg {
+    max-width: 100%;
+    height: auto;
 }
 
-input::-moz-focus-inner {
-    border: 0;
-    padding: 0;
-    margin: 0;
-}
-
-cite {
+address {
     font-style: normal;
 }
 
-fieldset {
-    border-width: 0;
+/* Form */
+
+input,
+textarea,
+button,
+select {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button,
+input[type="submit"] {
+    display: inline-block;
+    box-shadow: none;
+    background-color: transparent;
+    background: none;
+    cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+    outline: none;
+}
+
+button::-moz-focus-inner {
     padding: 0;
-    margin: 0;
+    border: 0;
+}
+
+label {
+    cursor: pointer;
+}
+
+legend {
+    display: block;
 }

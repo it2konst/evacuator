@@ -1,0 +1,90 @@
+.advantages {
+    @include resp(padding-top, 24, 100);
+    @include resp(padding-bottom, 24, 100);
+}
+
+.advantages__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 34px;
+    margin-bottom: 100px;
+
+    .advantages__inner {
+        max-width: 733px;
+        width: 100%;
+    }
+
+    .advantages__img {
+        overflow: hidden;
+        max-width: 630px;
+        width: 100%;
+
+        img {
+            display: block;
+            width: inherit;
+        }
+    }
+
+    @include breakpoint(tab) {
+        flex-wrap: wrap;
+    }
+}
+
+.advantages__title {
+    margin-bottom: 3rem;
+}
+
+.advantages__desc {
+    margin-bottom: 2rem;
+    span {
+        font-weight: 700;
+    }
+}
+
+.advantages-list__item {
+    position: relative;
+    margin-left: 3rem;
+
+    &:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+    &::before {
+        content: url("./../images/svg/done.svg");
+        position: absolute;
+        display: block;
+        top: 0;
+        left: -3rem;
+    }
+}
+
+.evacuator-info {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+
+    .evacuator-info__payment,
+    .evacuator-info__arrival {
+        max-width: 684px;
+        width: 100%;
+
+        width: 684px;
+        padding: 48px;
+        border-radius: 20px;
+
+        background: #fff5cc;
+
+        p:not(:last-child) {
+            margin-bottom: 1lh;
+        }
+    }
+
+    .evacuator-info__title {
+        margin-bottom: 32px;
+    }
+
+    @include breakpoint(tab) {
+        flex-wrap: wrap;
+    }
+}

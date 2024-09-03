@@ -794,6 +794,29 @@ a1:hover {
 .advantages {
   padding-top: max(24px, min(100px, 24px + (100 - 24) * (100vw - 360px) / (1920 - 360)));
   padding-bottom: max(24px, min(100px, 24px + (100 - 24) * (100vw - 360px) / (1920 - 360)));
+  position: relative;
+}
+
+.advantages::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 14%;
+  left: 0;
+  z-index: -1;
+  background-color: #fff;
+}
+
+.advantages__background1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 14%;
+  left: 0;
+  z-index: -1;
+  background-color: #fff;
 }
 
 .advantages__wrapper {
@@ -876,7 +899,6 @@ a1:hover {
 }
 
 .evacuators {
-  padding-top: max(24px, min(100px, 24px + (100 - 24) * (100vw - 360px) / (1920 - 360)));
   padding-bottom: max(24px, min(100px, 24px + (100 - 24) * (100vw - 360px) / (1920 - 360)));
 }
 
@@ -897,7 +919,7 @@ a1:hover {
   flex-direction: column;
   gap: 20px;
   border-radius: 20px;
-  padding: 40px;
+  padding: max(20px, min(40px, 20px + (40 - 20) * (100vw - 360px) / (1920 - 360)));
   width: 684px;
   height: 682px;
   box-shadow: 2px 2px 10px 2px rgba(39, 52, 58, 0.15);
@@ -914,10 +936,57 @@ a1:hover {
   width: inherit;
 }
 
-.swiper .swiper-button-prev::after,
-.swiper .swiper-button-next::after {
-  color: darkred;
-  font-size: 80px;
+.slider-wrapper {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.swiper {
+  width: 100%;
+  padding-bottom: 3rem;
+}
+
+.slider-wrapper .myslider-next::after,
+.slider-wrapper .myslider-prev::after {
+  font-size: 30px;
+  color: var(--main-blue);
+  border: 1px solid var(--main-blue);
+  border-radius: 6px;
+  padding: 10px 20px;
+}
+
+.myslider-prev,
+.myslider-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+}
+@media screen and (max-width: 992px) {
+  .myslider-prev,
+  .myslider-next {
+    display: none;
+  }
+}
+
+.myslider-prev {
+  left: -70px;
+}
+@media screen and (max-width: 1400px) {
+  .myslider-prev {
+    left: 54px;
+  }
+}
+
+.myslider-next {
+  right: -70px;
+}
+@media screen and (max-width: 1400px) {
+  .myslider-next {
+    right: 54px;
+  }
 }
 
 .swiper .swiper-pagination {
@@ -925,11 +994,8 @@ a1:hover {
 }
 
 .swiper .swiper-pagination-bullet {
-  width: 20px;
-  height: 20px;
-  line-height: 20px;
-  font-size: 14px;
-  background-color: darkred;
+  width: 12px;
+  height: 12px;
 }
 
 .btn {
@@ -996,13 +1062,13 @@ a1:hover {
 .card-title {
   font-family: var(--font-family);
   font-weight: 700;
-  font-size: 20px;
+  font-size: max(18px, min(20px, 18px + (20 - 18) * (100vw - 360px) / (1920 - 360)));
   color: var(--dark);
 }
 
 .card-desc {
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 20px;
+  font-size: max(16px, min(20px, 16px + (20 - 16) * (100vw - 360px) / (1920 - 360)));
   color: var(--dark);
 }/*# sourceMappingURL=main.css.map */

@@ -1,28 +1,27 @@
 .h2-text {
     font-family: var(--font-family);
     font-weight: 700;
-    font-size: 40px;
+    @include resp(font-size, 32, 40);
     color: var(--dark);
 }
 
 .h3-text {
     font-family: var(--font-family);
     font-weight: 700;
-    font-size: 26px;
+    @include resp(font-size, 20, 26);
     color: var(--dark);
 }
 
 .p-text {
     font-family: var(--font-family);
     font-weight: 400;
-    font-size: 26px;
+    @include resp(font-size, 20, 26);
     color: var(--dark);
 }
 
 .card-title {
     font-family: var(--font-family);
     font-weight: 700;
-    // font-size: 20px;
     @include resp(font-size, 18, 20);
     color: var(--dark);
 }
@@ -30,7 +29,6 @@
 .card-desc {
     font-family: var(--font-family);
     font-weight: 400;
-    // font-size: 20px;
     @include resp(font-size, 16, 20);
     color: var(--dark);
 }

@@ -95,7 +95,8 @@
         width: 100%;
 
         width: 684px;
-        padding: 48px;
+        // padding: 48px;
+        @include resp(padding, 20, 48);
         border-radius: 20px;
 
         background: #fff5cc;

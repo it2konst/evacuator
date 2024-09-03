@@ -1,5 +1,5 @@
 .evacuators {
-    @include resp(padding-top, 24, 100);
+    // @include resp(padding-top, 24, 100);
     @include resp(padding-bottom, 24, 100);
 }
 
@@ -24,8 +24,8 @@
         gap: 20px;
 
         border-radius: 20px;
-        padding: 40px;
-        // box-sizing: border-box;
+        // padding: 40px;
+        @include resp(padding, 20, 40);
         width: 684px;
         height: 682px;
 
@@ -46,12 +46,56 @@
     }
 }
 
-//  -----------
+//  slider
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    // max-width: 600px;
+}
 
-.swiper .swiper-button-prev::after,
-.swiper .swiper-button-next::after {
-    color: darkred;
-    font-size: 80px;
+.swiper {
+    width: 100%;
+    padding-bottom: 3rem;
+}
+
+.slider-wrapper .myslider-next::after,
+.slider-wrapper .myslider-prev::after {
+    font-size: 30px;
+    color: var(--main-blue);
+
+    border: 1px solid var(--main-blue);
+    border-radius: 6px;
+    padding: 10px 20px;
+}
+
+.myslider-prev,
+.myslider-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+
+    @include breakpoint(lg) {
+        display: none;
+    }
+}
+
+.myslider-prev {
+    left: -70px;
+
+    @include breakpoint(tab) {
+        left: 54px;
+    }
+}
+
+.myslider-next {
+    right: -70px;
+
+    @include breakpoint(tab) {
+        right: 54px;
+    }
 }
 
 .swiper .swiper-pagination {
@@ -59,9 +103,6 @@
 }
 
 .swiper .swiper-pagination-bullet {
-    width: 20px;
-    height: 20px;
-    line-height: 20px;
-    font-size: 14px;
-    background-color: darkred;
+    width: 12px;
+    height: 12px;
 }

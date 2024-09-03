@@ -1,6 +1,31 @@
 .advantages {
     @include resp(padding-top, 24, 100);
     @include resp(padding-bottom, 24, 100);
+
+    position: relative;
+}
+
+.advantages::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 14%;
+    left: 0;
+    z-index: -1;
+    background-color: #fff;
+}
+
+.advantages__background1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 14%;
+    left: 0;
+    z-index: -1;
+
+    background-color: #fff;
 }
 
 .advantages__wrapper {

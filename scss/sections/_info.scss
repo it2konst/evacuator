@@ -1,6 +1,5 @@
 .info {
     background-color: #fff5cc;
-    // background-color: #ccc;
 }
 
 .info__wrapper {
@@ -42,22 +41,34 @@
         }
 
         .info-block__title {
+            hyphens: auto;
             margin-bottom: 0.6lh;
         }
 
         .info-block__desc {
             margin-bottom: 0.8lh;
         }
+    }
+}
 
-        .info-block__list-item:not(:last-child) {
-            margin-bottom: 1lh;
-        }
+.info-block__list-item {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
 
-        .info-block__list-item::before {
-            content: "✔";
-            margin-right: 10px;
-            color: blue;
-        }
+    &:not(:last-child) {
+        margin-bottom: 1lh;
+    }
+
+    &::before {
+        content: url("./../images/sprite.svg#icon-done");
+        display: block;
+        width: 34px;
+        height: 32px;
+        background-repeat: no-repeat;
+        background-position: center;
+        // background-size: cover;
+        margin-right: 10px;
     }
 }
 
@@ -76,7 +87,7 @@
 
 .info__wrapper.info__wrapper--reverse {
     .info-block {
-        padding: 80px 0px 60px 56px;
+        padding: 60px 0px 60px 56px;
 
         @include breakpoint(tab) {
             padding: 20px 15px 20px 15px;

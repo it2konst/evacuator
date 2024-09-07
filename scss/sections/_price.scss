@@ -1,0 +1,119 @@
+.tabs {
+    // @include resp(padding-bottom, 24, 100);
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    // box-shadow: 2px 2px 10px 2px rgba(39, 52, 58, 0.15);
+    filter: drop-shadow(2px 2px 2px rgba(39, 52, 58, 0.15));
+}
+
+.tabs__label {
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+
+    // width: 275px;
+    // height: 78px;
+
+    padding: 20px 52px;
+    @include breakpoint(md) {
+        padding: 12px 18px;
+    }
+    border-radius: 20px 20px 0px 0px;
+
+    @include no-tap-highlight;
+}
+
+.tabs__radio {
+    display: none;
+}
+
+.tabs__content {
+    padding: 48px 60px 60px 60px;
+    @include breakpoint(md) {
+        padding: 16px 12px 16px 12px;
+    }
+    border-radius: 0px 20px 20px 20px;
+    background-color: #fff;
+
+    order: 1;
+    width: 100%;
+    // border-bottom: 3px solid #dddddd;
+    // line-height: 1.5;
+    // font-size: 0.9em;
+    display: none;
+
+    & > p:last-child {
+        margin-bottom: 0;
+    }
+
+    ol {
+        margin-bottom: 0;
+    }
+}
+
+.tabs__radio:checked + .tabs__label {
+    font-weight: bold;
+    color: #009578;
+    // border-bottom: 2px solid #009578;
+    background-color: #fff;
+}
+
+.tabs__radio:checked + .tabs__label + .tabs__content {
+    display: initial;
+}
+
+//--------------------------
+
+.price__title {
+    margin-bottom: 0.661lh;
+}
+.price__description {
+    margin-bottom: 0.9lh;
+}
+.price__subtitle {
+    font-weight: 600;
+    margin-bottom: 0.9lh;
+}
+
+.price__factors,
+.price__cases,
+.price__steps {
+    margin-bottom: 0.9lh;
+}
+
+.price__factor,
+.price__case,
+.price__step {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+
+    &:not(:last-child) {
+        margin-bottom: 0.9lh;
+    }
+
+    &::before {
+        content: url("./../images/sprite.svg#icon-done");
+        display: block;
+        width: 34px;
+        height: 32px;
+        background-repeat: no-repeat;
+        background-position: center;
+        // background-size: cover;
+        margin-right: 10px;
+    }
+}
+
+.px-torem {
+    font-size: toRemResp(16, 32);
+}
+
+.px-torem1 {
+    font-size: 2rem;
+}
+
+.px-torem2 {
+    // font-size: toRem(32);
+    font-size: clamp(1rem, 0.769rem + 1.03vw, 2rem);
+}

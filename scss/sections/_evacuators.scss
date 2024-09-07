@@ -1,11 +1,8 @@
 .evacuators {
-    // @include resp(padding-top, 24, 100);
     @include resp(padding-bottom, 24, 100);
 }
 
 .evacuators__title {
-    // margin-bottom: 3rem;
-    // @include resp(margin-bottom, 32, 48);
     margin-bottom: 1lh;
 }
 
@@ -19,25 +16,17 @@
 
 .evacuators__types {
     // height: 682px;
-    @include resp(height, 570, 682);
-
     .evacuator-card {
         display: flex;
         flex-direction: column;
-        // align-items: left;
-        // justify-content: left;
         gap: 20px;
 
         border-radius: 20px;
-        // padding: 40px;
         @include resp(padding, 20, 40);
         width: 684px;
         height: 100%;
-        // height: 682px;
 
-        // box-shadow: 2px 2px 10px 2px rgba(39, 52, 58, 0.15);
-        box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6); // box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
-        background: #fff;
+        box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
 
         .evacuator-card__image {
             overflow: hidden;
@@ -58,12 +47,15 @@
     position: relative;
     width: 100%;
     margin: 0 auto;
-    // max-width: 600px;
 }
 
 .swiper {
     width: 100%;
     padding-bottom: 3rem;
+
+    @include breakpoint(tab) {
+        padding-bottom: 2rem;
+    }
 }
 
 .slider-wrapper .myslider-next::after,

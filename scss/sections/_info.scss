@@ -1,5 +1,7 @@
 .info {
     background-color: #fff5cc;
+    // @include resp(margin-bottom, 24, 106);
+    margin-bottom: toRemResp(26, 106);
 }
 
 .info__wrapper {

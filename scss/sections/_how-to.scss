@@ -8,13 +8,11 @@
     justify-content: center;
     @include gap(16, 38);
     padding: 0 16px;
-    // position: relative;
     max-width: 1920px;
     height: 142px;
     margin-left: auto;
     margin-right: auto;
     background-image: url("./../images/header/banner.webp");
-    // background-size: contain;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -60,20 +58,15 @@
 
     .call-tow__box {
         display: flex;
-        // align-items: center;
-        // justify-content: center;
         flex-direction: column;
         max-width: 698px;
         width: 100%;
 
         .call-tow__title {
-            font-weight: 700;
-            font-size: 40px;
-            @include margin-bottom(24, 48);
+            margin-bottom: 1lh;
         }
 
         .call-tow__desc {
-            font-size: 26px;
             line-height: 1.3;
 
             &:not(:last-child) {

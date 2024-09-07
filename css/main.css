@@ -159,7 +159,7 @@ body {
   font-optical-sizing: auto;
   color: var(--dark);
   background-color: #f3f6f9;
-  padding-bottom: 600px;
+  padding-bottom: 300px;
 }
 
 .container {
@@ -356,6 +356,7 @@ a1:hover {
 }
 
 .service-card__wrapper {
+  overflow: hidden;
   display: flex;
   justify-content: center;
   gap: 28px;
@@ -1155,8 +1156,12 @@ a1:hover {
   display: grid;
   place-items: center;
   cursor: pointer;
-  padding: 20px 52px;
   border-radius: 20px 20px 0px 0px;
+  padding: 20px 52px;
+  white-space: nowrap;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
 }

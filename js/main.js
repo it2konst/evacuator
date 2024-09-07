@@ -1,25 +1,26 @@
-const swiper = new Swiper('.swiper', {
-	loop: true,
-	spaceBetween: 32,
-	grabCursor: true,
-
-	pagination: {
-		el: '.swiper-pagination',
-		clickable: true,
-	},
-	navigation: {
-		nextEl: '.myslider-next',
-		prevEl: '.myslider-prev',
-	},
-	breakpoints: {
-		320: {
-			slidesPerView: 1,
-			slidesPerGroup: 1,
-		},
-		1400: {
-			slidesPerGroup: 2,
-			slidesPerView: 2,
-		},
-	},
+const loadScript = (src) => new Promise((resolve, reject) => {
+	const script = document.createElement('script');
+	script.src = src;
+	script.onload = () => resolve(src);
+	script.onerror = () => reject(new Error(`Failed to load script ${src}`));
+	document.head.appendChild(script);
 });
 
+const loadScripts = async () => {
+	const scripts = [
+		'./js/lib/swiper-bundle.min.js',
+		'./js/lib/swiper-options.js',
+		'./js/pagItemsClick.js',
+	];
+
+	try {
+		for (const script of scripts) {
+			await loadScript(script);
+			console.log(`Script ${script} loaded`);
+		}
+	} catch (error) {
+		console.error('Error loading scripts:', error);
+	}
+};
+
+loadScripts();

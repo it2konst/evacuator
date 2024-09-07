@@ -155,3 +155,48 @@
         )
     );
 }
+
+@function toRem($value) {
+    $remValue: ($value / 16) + rem;
+    @return $remValue;
+}
+
+@function toRemResp($min-size, $max-size) {
+    $max-width: 1920;
+    $min-width: 360;
+    $min-width-rem: calc($min-width / 16) + rem;
+    $min-rem: calc($min-size / 16) + rem;
+    $max-rem: calc($max-size / 16) + rem;
+    $calcValue: calc(($max-size / 16) - ($min-size / 16));
+
+    $vwValue: calc(100vw - $min-width-rem);
+    $decValue: calc(($max-width - $min-width) / 16);
+    $DivScreen: calc($vwValue / $decValue);
+
+    $remValue: max(
+        $min-rem,
+        min($max-rem, calc($min-rem + $calcValue * $DivScreen))
+    );
+    @return $remValue;
+}
+
+// font-size: max(1rem, min(2rem, 1rem + 1 * (100vw - 22.5rem) / 97.5));
+// $fz-16-20: min(20px, calc(16px + (20 - 16) * ((100vw - 360px) / (1920 - 360))));
+
+// @function resp3($min-size, $max-size) {
+//     $min-width: 360;
+//     $min-width-rem: calc($min-width / 16) + rem;
+//     $max-width: 1920;
+//     $min-rem: calc($min-size / 16) + rem;
+//     $max-rem: calc($max-size / 16) + rem;
+
+//     $calcValue: calc(($max-size / 16) - ($min-size / 16));
+//     $vwValue: calc(100vw - $min-width-rem);
+//     $decValue: calc(pxtoRem($max-width - $min-width));
+
+//     $remValue: max(
+//         $min-rem,
+//         min($max-rem, calc($min-rem + $calcValue * ($vwValue / $decValue)))
+//     );
+//     @return $remValue;
+// }

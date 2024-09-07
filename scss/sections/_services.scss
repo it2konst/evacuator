@@ -3,6 +3,7 @@
     margin: 0px 15px;
     @include margin-bottom(24, 80);
 }
+
 .services__list {
     display: flex;
     align-items: center;
@@ -11,6 +12,7 @@
 
     padding-bottom: 60px;
 }
+
 .service-card {
     border-radius: 20px;
     padding: 40px 48px;
@@ -35,6 +37,7 @@
 }
 
 .service-card__wrapper {
+    overflow: hidden;
     display: flex;
     justify-content: center;
     gap: 28px;

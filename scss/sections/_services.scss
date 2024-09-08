@@ -154,6 +154,7 @@
 
         .service-card__adr {
             display: flex;
+            // flex-direction: column;
             flex-wrap: wrap;
             justify-content: start;
             align-items: center;
@@ -172,6 +173,7 @@
 
             br + span {
                 color: #1b1e1f;
+                padding-right: 40px;
             }
 
             &::before {

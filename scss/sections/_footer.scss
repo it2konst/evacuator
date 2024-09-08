@@ -1,0 +1,134 @@
+.footer {
+    background-color: #586c75;
+    padding: 20px 0;
+    position: relative;
+    // overflow: hidden;
+}
+
+.arrow-up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, -130%);
+
+    @include breakpoint(md) {
+        transform: translate(-20%, 20%);
+    }
+
+    width: 44px;
+    aspect-ratio: 1;
+    border: 1px solid var(--main-blue);
+    border-radius: 8px;
+    background-color: #fff;
+
+    @include no-tap-highlight;
+
+    &::before {
+        content: url("./../images/sprite.svg#arrow-up");
+        display: block;
+        width: 16px;
+        height: 26px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+
+    // align-items: center;
+    // max-width: 1200px;
+    // margin: 0 auto;
+
+    @include breakpoint(tab) {
+        gap: 20px;
+        padding: 0px 32px 0px 20px;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    @include breakpoint(sm) {
+        gap: 10px;
+        padding: 10px 10px 20px 10px;
+    }
+}
+
+.footer__logo {
+    width: 112px;
+    aspect-ratio: 1;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    margin: 41px 0px 81px 0px;
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    @include breakpoint(sm) {
+        width: 64px;
+        height: 64px;
+    }
+
+    @include breakpoint(sm) {
+        margin: 0px 0px 0px 0px;
+    }
+}
+
+.footer__nav {
+    display: flex;
+    margin-top: 92px;
+    @include breakpoint(sm) {
+        margin-top: 0px;
+    }
+}
+
+.footer__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    @include breakpoint(tab) {
+        flex-wrap: wrap;
+    }
+
+    @include breakpoint(sm) {
+        flex-direction: column;
+    }
+}
+
+.footer__item {
+    margin-right: toRemResp(20, 63);
+    @include breakpoint(sm) {
+        margin-right: 0;
+        margin-bottom: 12px;
+    }
+}
+
+.footer__item:last-child {
+    margin-right: 0;
+}
+
+.footer__link {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: toRemResp(14, 16);
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer__link:hover {
+    text-decoration: underline;
+}

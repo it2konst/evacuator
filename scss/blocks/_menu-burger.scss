@@ -1,0 +1,133 @@
+.menu {
+    display: none;
+}
+
+.header__burger-btn {
+    display: none;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    z-index: 2;
+    cursor: pointer;
+    @include breakpoint(md) {
+        margin-right: 10px;
+    }
+    @include breakpoint(sm) {
+        margin-right: 0px;
+    }
+}
+
+.header__burger-btn span {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    left: 5px;
+    background-color: black;
+    transition: background-color 0.3s, opacity 0.3s, transform 0.5s;
+    will-change: transform;
+}
+
+.header__burger-btn:hover span {
+    background-color: rgb(103, 103, 103);
+}
+
+.header__burger-btn span:nth-child(1) {
+    transform: translateY(-10px);
+}
+
+.header__burger-btn span:nth-child(2) {
+}
+
+.header__burger-btn span:nth-child(3) {
+    transform: translateY(10px);
+}
+
+/* Крестик */
+
+.header.open .header__burger-btn span {
+    background-color: white;
+}
+
+.header.open .header__burger-btn span:nth-child(1) {
+    transform: translateY(0) rotate(45deg);
+}
+
+.header.open .header__burger-btn span:nth-child(2) {
+    opacity: 0;
+}
+
+.header.open .header__burger-btn span:nth-child(3) {
+    transform: translateY(0) rotate(-45deg);
+}
+
+.menu__list {
+    display: none;
+    // display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+// .menu__item:not(:last-child) {
+//     margin-right: 20px;
+// }
+
+// .menu__link {
+//     font-size: 16px;
+// }
+
+// @include breakpoint (md) {
+//     flex: 0 0 100%;
+// }
+
+// @media (max-width: 768px) {
+@include breakpoint(md) {
+    .header__burger-btn {
+        display: block;
+    }
+
+    .menu {
+        display: block;
+        position: absolute;
+        // right: -300px;
+        // top: 0;
+        top: -330px;
+        right: 0;
+        width: 300px;
+        padding: 75px 20px 20px 20px;
+        background-color: var(--main-blue);
+        // visibility: hidden;
+        transition: transform 0.5s, visibility 0.5s;
+        will-change: transform;
+    }
+
+    .menu__list {
+        display: block;
+    }
+
+    .menu__item:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .menu__link {
+        color: white;
+        display: block;
+        padding: 10px;
+
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 20px;
+        // text-transform: capitalize;
+    }
+
+    .header.open .menu {
+        // transform: translateX(-100%);
+        transform: translateY(130%);
+        visibility: visible;
+    }
+}

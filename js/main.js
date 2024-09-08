@@ -10,7 +10,8 @@ const loadScripts = async () => {
 	const scripts = [
 		'./js/lib/swiper-bundle.min.js',
 		'./js/lib/swiper-options.js',
-		'./js/pagItemsClick.js',
+		'./js/pag-item-click.js',
+		'./js/menu-burger.js',
 	];
 
 	try {

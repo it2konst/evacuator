@@ -157,7 +157,6 @@ html {
 body {
   font-family: var(--font-family);
   font-weight: 400;
-  font-optical-sizing: auto;
   color: var(--dark);
   background-color: #f3f6f9;
 }
@@ -167,15 +166,6 @@ body {
   max-width: 1430px;
   width: 100%;
   padding: 0 15px;
-}
-
-a1 {
-  opacity: 0.9;
-  transition: opacity 0.2s ease-in-out, text-shadow 0.2s ease-in-out;
-}
-a1:hover {
-  opacity: 1;
-  text-shadow: 0 0 4px #d795ff;
 }
 
 .visually-hidden {

@@ -26,8 +26,9 @@
     border: 1px solid var(--main-blue);
     border-radius: 8px;
     background-color: #fff;
-
     @include no-tap-highlight;
+
+    filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.2));
 
     &::before {
         content: url("./../images/sprite.svg#arrow-up");
@@ -56,6 +57,7 @@
     }
 
     @include breakpoint(sm) {
+        flex-direction: column-reverse;
         gap: 10px;
         padding: 10px 10px 20px 10px;
     }
@@ -81,7 +83,8 @@
     }
 
     @include breakpoint(sm) {
-        margin: 0px 0px 0px 0px;
+        // margin: 0px 0px 0px 0px;
+        margin: 0 auto;
     }
 }
 
@@ -106,29 +109,56 @@
     @include breakpoint(sm) {
         flex-direction: column;
     }
-}
 
-.footer__item {
-    margin-right: toRemResp(20, 63);
-    @include breakpoint(sm) {
-        margin-right: 0;
-        margin-bottom: 12px;
+    .footer__item {
+        margin-right: toRemResp(20, 63);
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        @include breakpoint(sm) {
+            margin-right: 0;
+            margin-bottom: 12px;
+        }
+
+        a {
+            position: relative;
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: toRemResp(14, 16);
+            text-transform: uppercase;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        a::before {
+            content: "";
+            position: absolute;
+            bottom: -0.3rem;
+            right: 0;
+            width: 0%;
+            height: 0.12rem;
+            background-color: var(--main-blue);
+            transition: 0.3s linear;
+        }
+
+        a:hover::before {
+            left: 0;
+            width: 100%;
+        }
     }
 }
 
-.footer__item:last-child {
-    margin-right: 0;
-}
+// .footer__link {
+//     font-family: var(--font-family);
+//     font-weight: 400;
+//     font-size: toRemResp(14, 16);
+//     text-transform: uppercase;
+//     color: #fff;
+//     text-decoration: none;
+// }
 
-.footer__link {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: toRemResp(14, 16);
-    text-transform: uppercase;
-    color: #fff;
-    text-decoration: none;
-}
-
-.footer__link:hover {
-    text-decoration: underline;
-}
+// .footer__link:hover {
+//     text-decoration: underline;
+// }

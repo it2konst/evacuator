@@ -4,11 +4,11 @@
     background-color: #fff5cc;
 }
 
-.steps__title {
-    font-weight: 700;
-    @include resp(font-size, 24, 40);
-    @include resp(margin-bottom, 24, 55);
-}
+// .steps__title {
+//     font-weight: 700;
+//     @include resp(font-size, 24, 40);
+//     @include resp(margin-bottom, 24, 55);
+// }
 
 .steps__list {
     display: flex;
@@ -36,9 +36,9 @@
         width: 100%;
     }
 
-    .steps__text {
-        @include resp(font-size, 18, 26);
-    }
+    // .steps__text {
+    //     @include resp(font-size, 18, 26);
+    // }
 
     @include breakpoint(tab) {
         flex-wrap: wrap;

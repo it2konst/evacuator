@@ -258,10 +258,11 @@
         color: var(--main-blue);
 
         @include no-tap-highlight;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
     }
 
     .active {
         color: #fff;
-        background: var(--main-blue);
+        background-color: var(--main-blue);
     }
 }

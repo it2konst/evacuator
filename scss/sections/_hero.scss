@@ -1,5 +1,6 @@
 .hero {
-    margin-top: 142px;
+    margin-top: toRemResp(96, 142);
+    scroll-margin-top: toRemResp(96, 142);
 }
 
 .hero__content {

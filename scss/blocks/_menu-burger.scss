@@ -1,5 +1,11 @@
 .menu {
     display: none;
+    overflow: hidden;
+    border-bottom-left-radius: 20px;
+
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+        rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .header__burger-btn {
@@ -10,7 +16,7 @@
     background-color: transparent;
     border: none;
     outline: none;
-    z-index: 2;
+    z-index: 99;
     cursor: pointer;
     @include breakpoint(md) {
         margin-right: 10px;
@@ -39,15 +45,13 @@
     transform: translateY(-10px);
 }
 
-.header__burger-btn span:nth-child(2) {
-}
+// .header__burger-btn span:nth-child(2) {}
 
 .header__burger-btn span:nth-child(3) {
     transform: translateY(10px);
 }
 
-/* Крестик */
-
+// Крестик
 .header.open .header__burger-btn span {
     background-color: white;
 }
@@ -66,26 +70,45 @@
 
 .menu__list {
     display: none;
-    // display: flex;
-    align-items: center;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+    align-items: left;
+    padding-top: 2rem;
+
+    .menu__item:not(:last-child) {
+        margin-bottom: 1.6rem;
+    }
+
+    .menu__item a {
+        display: block;
+        position: relative;
+
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 20px;
+        text-transform: capitalize;
+        // text-transform: uppercase;
+        color: #fff;
+
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .menu__item a::before {
+        content: "";
+        position: absolute;
+        bottom: -0.3rem;
+        right: 0;
+        width: 0%;
+        height: 0.1rem;
+        background-color: #fff;
+        transition: 0.3s linear;
+    }
+
+    .menu__item a:hover::before {
+        left: 0;
+        width: 100%;
+    }
 }
 
-// .menu__item:not(:last-child) {
-//     margin-right: 20px;
-// }
-
-// .menu__link {
-//     font-size: 16px;
-// }
-
-// @include breakpoint (md) {
-//     flex: 0 0 100%;
-// }
-
-// @media (max-width: 768px) {
 @include breakpoint(md) {
     .header__burger-btn {
         display: block;
@@ -94,12 +117,10 @@
     .menu {
         display: block;
         position: absolute;
-        // right: -300px;
-        // top: 0;
         top: -330px;
         right: 0;
         width: 300px;
-        padding: 75px 20px 20px 20px;
+        padding: 56px 20px 30px 30px;
         background-color: var(--main-blue);
         // visibility: hidden;
         transition: transform 0.5s, visibility 0.5s;
@@ -107,26 +128,15 @@
     }
 
     .menu__list {
-        display: block;
+        display: flex;
+        flex-direction: column;
     }
 
     .menu__item:not(:last-child) {
         margin-right: 0;
     }
 
-    .menu__link {
-        color: white;
-        display: block;
-        padding: 10px;
-
-        font-family: var(--font-family);
-        font-weight: 400;
-        font-size: 20px;
-        // text-transform: capitalize;
-    }
-
     .header.open .menu {
-        // transform: translateX(-100%);
         transform: translateY(130%);
         visibility: visible;
     }

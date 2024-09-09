@@ -12,6 +12,7 @@ const loadScripts = async () => {
 		'./js/lib/swiper-options.js',
 		'./js/pag-item-click.js',
 		'./js/menu-burger.js',
+		'./js/header-sticky.js',
 	];
 
 	try {

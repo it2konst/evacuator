@@ -108,37 +108,30 @@ legend {
 
 @font-face {
   font-family: "SF Pro Text";
-  font-style: normal;
-  font-weight: 400;
-  src: url("./../font/SF-Pro-Text-Regular.woff2") format("woff2"), url("./../font/SF-Pro-Text-Regular.woff") format("woff");
-  font-display: swap;
-}
-@font-face {
-  font-family: "SF Pro Text";
-  font-style: normal;
-  font-weight: 700;
-  src: url("./../font/SF-Pro-Text-Bold.woff2") format("woff2"), url("./../font/SF-Pro-Text-Bold.woff") format("woff");
-  font-display: swap;
-}
-@font-face {
-  font-family: "SF Pro Text";
-  font-style: normal;
-  font-weight: 600;
-  src: url("./../font/SF-Pro-Text-Semibold.woff2") format("woff2"), url("./../font/SF-Pro-Text-Semibold.woff") format("woff");
-  font-display: swap;
-}
-@font-face {
-  font-family: "SF Pro Text";
-  font-style: normal;
+  src: url("./../font/SFProText-Medium.woff2") format("woff2"), url("./../font/SFProText-Medium.woff") format("woff");
   font-weight: 500;
-  src: url("./../font/SF-Pro-Text-Medium.woff2") format("woff2"), url("./../font/SF-Pro-Text-Medium.woff") format("woff");
+  font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "SF Pro Rounded";
+  font-family: "SF Pro Text";
+  src: url("./../font/SFProText-Regular.woff2") format("woff2"), url("./../font/SFProText-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("./../font/SFProText-Bold.woff2") format("woff2"), url("./../font/SFProText-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("./../font/SFProText-Semibold.woff2") format("woff2"), url("./../font/SFProText-Semibold.woff") format("woff");
   font-weight: 600;
-  src: url("./../font/SF-Pro-Rounded-Semibold.woff2") format("woff2"), url("./../font/SF-Pro-Rounded-Semibold.woff") format("woff");
+  font-style: normal;
   font-display: swap;
 }
 :root {
@@ -146,7 +139,6 @@ legend {
   --dark: #131515;
   --yellow: #ffcd00;
   --font-family: "SF Pro Text", sans-serif;
-  --second-family: "SF Pro Rounded", sans-serif;
 }
 
 html {
